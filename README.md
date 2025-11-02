@@ -79,6 +79,5 @@ git clone git@github.com:KenziVisor/fat-tree-topology-sim.git
 cd fat-tree-topology-sim
 python3 -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
 pip install networkx matplotlib argparse
 python3 fat-tree-topology-sim.py -k 4

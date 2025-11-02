@@ -91,7 +91,7 @@ def draw_graph(g: nx.Graph) -> None:
             color_map.append("white")
 
     # Draw
-    plt.figure(figsize=(12, 7))
+    plt.figure(figsize=(12, 7), constrained_layout=True)
     nx.draw(
         g,
         pos,
@@ -108,7 +108,6 @@ def draw_graph(g: nx.Graph) -> None:
     # Titles and aesthetics
     plt.title("Fat-Tree Topology — Layered View (Core → Agg → Edge → Hosts)")
     plt.axis("off")
-    plt.tight_layout()
     plt.show()
 
 

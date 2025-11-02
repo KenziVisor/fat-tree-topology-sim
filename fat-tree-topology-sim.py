@@ -3,7 +3,6 @@ import argparse
 import sys
 import os
 from matplotlib import pyplot as plt
-from numba.core.ir import Raise
 
 
 def build_fat_tree(k: int) -> nx.Graph:

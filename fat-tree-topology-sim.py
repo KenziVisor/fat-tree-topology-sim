@@ -43,7 +43,7 @@ def build_fat_tree(k: int) -> nx.Graph:
     return g
 
 
-def draw_graph(g: nx.Graph) -> None:
+def draw_graph(g: nx.Graph, k:int) -> None:
     """
     I used chatGPT in order to create this method:
     Draws the given fat-tree graph with clear layers:
@@ -108,7 +108,8 @@ def draw_graph(g: nx.Graph) -> None:
     # Titles and aesthetics
     plt.title("Fat-Tree Topology — Layered View (Core → Agg → Edge → Hosts)")
     plt.axis("off")
-    plt.show()
+    plt.savefig(f'fat tree topology k equals {k}')
+    print('The figure is located in the working directory')
 
 
 if __name__ == "__main__":
@@ -133,4 +134,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     g = build_fat_tree(k)
-    draw_graph(g)
+    draw_graph(g, k)

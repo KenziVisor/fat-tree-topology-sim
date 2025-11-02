@@ -73,18 +73,14 @@ Example for `k = 4`:
 \## ⚙️ Installation
 
 
-
-\### 1. Clone the repository
-
 ```bash
 
 git clone https://github.com/KenziVisor/fat-tree-topology
 
 cd fat-tree-topology
 
+python .\fat-tree-topology-sim.py -k 4
 
 
-\### 2. Run the code
 
-python .\\fat-tree-topology-sim.py -k 4
 

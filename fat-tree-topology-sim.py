@@ -1,7 +1,9 @@
 import networkx as nx
 import argparse
 import sys
+import os
 from matplotlib import pyplot as plt
+from numba.core.ir import Raise
 
 
 def build_fat_tree(k: int) -> nx.Graph:
@@ -108,8 +110,14 @@ def draw_graph(g: nx.Graph, k:int) -> None:
     # Titles and aesthetics
     plt.title("Fat-Tree Topology — Layered View (Core → Agg → Edge → Hosts)")
     plt.axis("off")
-    plt.savefig(f'fat tree topology k equals {k}')
-    print('The figure is located in the working directory')
+    file_name = f'fat tree topology k equals {k}.png'
+    plt.savefig(file_name)
+    if os.path.exists(file_name):
+        size = os.path.getsize(file_name)
+        if size > 0:
+            print(f"✅ File '{file_name}' exists and has size {size} bytes.")
+            return
+    raise FileNotFoundError(f"❌ File '{file_name}' was not created.")
 
 
 if __name__ == "__main__":

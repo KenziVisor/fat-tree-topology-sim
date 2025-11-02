@@ -76,11 +76,5 @@ Example for `k = 4`:
 ```bash
 
 git clone https://github.com/KenziVisor/fat-tree-topology
-
 cd fat-tree-topology
-
 python .\fat-tree-topology-sim.py -k 4
-
-
-
-

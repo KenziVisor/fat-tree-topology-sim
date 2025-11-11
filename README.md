@@ -10,9 +10,16 @@ Fat-Tree topologies are widely used in real data centers because they provide **
 
 ---
 
-## Installation
+\## ⚙️ Installation
 
-    pip install networkx matplotlib numpy
+
+```bash
+
+git clone git@github.com:KenziVisor/fat-tree-topology-sim.git
+cd fat-tree-topology-sim
+python3 -m venv .venv
+source .venv/bin/activate
+pip install networkx matplotlib numpy
 
 ---
 

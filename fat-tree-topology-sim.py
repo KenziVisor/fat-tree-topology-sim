@@ -5,6 +5,7 @@ import random
 import sys
 import os
 from matplotlib import pyplot as plt
+from typing import List, Tuple
 
 
 def build_fat_tree(k: int) -> nx.Graph:
@@ -142,14 +143,14 @@ def apply_failures(g: nx.Graph, prob: float) -> nx.Graph:
     return h
 
 
-def get_hosts(g: nx.Graph) -> list[str]:
+def get_hosts(g: nx.Graph) -> List[str]:
     """
     Return a sorted list of host nodes.
     """
     return sorted([n for n, d in g.nodes(data=True) if d.get("type") == "host"])
 
 
-def sample_random_host_pairs(g: nx.Graph) -> list[tuple[str, str]]:
+def sample_random_host_pairs(g: nx.Graph) -> List[Tuple[str, str]]:
     hosts = get_hosts(g)
     n = len(hosts)
 
